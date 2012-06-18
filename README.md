@@ -14,7 +14,7 @@ Folder structure:
 				root.css 			=> All base styles that we need to normalize the starting point for cross-browser development.
 				fonts.css 			=> All the font families used in B2G
 				app.css 			=> Common set-up for creating app layouts
-				package.css 		=> Includes: All the CSS files in the same folde
+				package.css 		=> Includes: All the CSS files in the same folder
 			/componets
 				buttons.css 		=> All the button types and structures related that the system provides
 				icons.css 			=> Icons provided by the system, could be bitmaps, fonts, or svg
@@ -22,7 +22,7 @@ Folder structure:
 				forms.css 			=> Low and medium structures for creating forms
 				lists.css 			=> High level strcutures for crafting lists
 				navigations.css 	=> High level strcutures for navigation use cases
-				package.css 		=> Includes: All the CSS files in the same folde
+				package.css 		=> Includes: All the CSS files in the same folder
 			package.css 			=> Includes: All the CSS files in bootzilla
 		/js
 			/base
