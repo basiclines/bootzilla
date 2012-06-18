@@ -1,12 +1,13 @@
 Bootzilla
 =========
 
-Bootzilla is a suite of CSS components and JS features for developing apps in B2G
+Bootzilla is a suite of CSS components and JS features for developing apps in B2G.
+
 You should not modifie your local copy of bootzilla, if you have some extra requirments or need and new component just make a pull request,
 or contact directly with the owners/collaborators.
 
 Folder structure:
-=========
+------------
 	/bootzilla
 		/css
 			/base
