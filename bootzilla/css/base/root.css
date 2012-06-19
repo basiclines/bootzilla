@@ -82,3 +82,9 @@ img:-moz-broken { line-height: 1.1rem; overflow: hidden; }
 article, aside, details, figcaption, figure, footer, header, hgroup, 
 menu, nav, section, video, audio, canvas, progress, meter, time 
 	{ display: block; padding: 0; margin: 0; }
+	
+/* TEMPLATING */
+
+*[data-template] {
+    display: none;
+}

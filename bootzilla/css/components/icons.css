@@ -1,6 +1,7 @@
 /**
  * ICONS.CSS
  * Icons provided by the system, could be bitmaps, fonts, or svg
+ * The icons are sorted by component type
  * ------------------------------------------------------*/
 
  
@@ -10,36 +11,52 @@ i {
 	width: 2.8rem;
 	height: 2.8rem;
 	font: 0/0 a;
+	background: transparent no-repeat center center;
 	background-size: 100% auto;
 }
 
-/* Title bar */
-.i-back 					{ background-color: rgba(0, 0, 0, 0.5); height: 4.8rem; }
-.i-add 						{ background-color: rgba(0, 0, 0, 0.5); }
-.i-edit 						{ background-color: rgba(0, 0, 0, 0.5); }
+
+/* .VW-HEADER */
+.i-back 					{ background-image: url(/bootzilla/gphx/bitmap/default/vw-header/back.png); width: 1.1rem; height: 2.7rem; }
+.i-add 						{ background-image: url(/bootzilla/gphx/bitmap/default/vw-header/add.png); width: 1.6rem; height: 1.6rem; }
+.i-edit 						{ background-image: url(/bootzilla/gphx/bitmap/default/vw-header/edit.png); width: 1.9rem; height: 2rem; }
 .i-finish 					{ background-color: rgba(0, 0, 0, 0.5); }
-.i-favourite 				{ background-color: rgba(0, 0, 0, 0.5); }
+.i-fav 				{ background-color: rgba(0, 0, 0, 0.5); }
 
 
-/* Buttons */
-.i-add						{ background-color: rgba(255, 255, 255, 0.5);  }
-.i-delete 					{ background-color: rgba(0, 0, 0, 0.5); width: 2rem; height: 2rem;  }
+/* .VW-JUMPER */
+.i-fav-dark 				{ background-image: url(/bootzilla/gphx/bitmap/default/vw-jumper/fav.png); width: 1.2rem; height: 1.1rem;  }
+.i-search 					{ background-image: url(/bootzilla/gphx/bitmap/default/vw-jumper/search.png); width: 1.2rem; height: 1.2 }
+
+
+/* .BLOCK-LIST */
+.i-fav-color 				{  background-image: url(/bootzilla/gphx/bitmap/default/block-list/fav.png); width: 2rem; height: 2rem; }
+
+
+/* .SELECTION-LIST */
+.i-selected 				{ background-color: rgba(0, 0, 0, 0.5); }
+
+
+/* .TABS */
+.i-profile 					{ background-color: rgba(255, 255, 255, 0.5) }
+
+
+/* .VW-NAV */
+.i-log 						{ background-color: rgba(255, 255, 255, 0.5); }
+.i-contacts 				{ background-color: rgba(255, 255, 255, 0.5); }
+.i-messages 				{ background-color: rgba(255, 255, 255, 0.5); }
+.i-grid 						{ background-color: rgba(255, 255, 255, 0.5); }
+
+
+/* GENERIC BUTTONS */
+.i-delete 					{ background-image: url(/bootzilla/gphx/bitmap/default/forms/delete.png);  width: 2.2rem; height: 2.2rem;  }
 
 .i-call 						{ background-color: rgba(0, 0, 0, 0.5); }
 .i-message 				{ background-color: rgba(0, 0, 0, 0.5); }
 .i-email	 				{ background-color: rgba(0, 0, 0, 0.5); }
 
-/* Tabs */
-.i-profile 					{ background-color: rgba(255, 255, 255, 0.5) }
 
-/* View Jumper */
-.i-search 					{ background-color: rgba(0, 0, 0, 0.5); }
-
-/* Selection list */
-.i-selected 				{ background-color: rgba(0, 0, 0, 0.5); }
-
-
-/* Arrows */
+/* GENERIC ARROWS */
 .i-arrow {
 	border: solid 0.4rem transparent;
 	width: 0;
@@ -49,10 +66,3 @@ i {
 .i-arrow.i-arw-bottom		 { margin-top: 0.4rem; border-top-color: #333; }
 .i-arrow.i-arw-left			 { margin-right: 0.4rem; border-right-color: #333; }
 .i-arrow.i-arw-right		 { margin-left: 0.4rem; border-left-color: #333; }
-
-
-/* Bottom nav */
-.i-log 						{ background-color: rgba(255, 255, 255, 0.5); }
-.i-contacts 				{ background-color: rgba(255, 255, 255, 0.5); }
-.i-messages 				{ background-color: rgba(255, 255, 255, 0.5); }
-.i-grid 						{ background-color: rgba(255, 255, 255, 0.5); }
