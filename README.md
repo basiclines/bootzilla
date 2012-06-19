@@ -31,16 +31,15 @@ Folder structure:
 			/components
 				infinite-scroll.js 	=> Component for creating typical autoload items list
       /utilities
-        templates.js 		=> Simple templating mechanism
-        xml-events.js   => Declarative event handler registration
-        multicard.js    => In-page transitions
-        appstates.js    => Dealing with application states and CSS
-        logger.js       => Dealing with logs in a clean manner
-        builder.js      => Construct XML cleanly by implementing the builder pattern
+        templates.js 					=> Simple templating mechanism
+        xml-events.js 				=> Declarative event handler registration
+        multicard.js 					=> In-page transitions
+        appstates.js 					=> Dealing with application states and CSS
+        logger.js 						=> Dealing with logs in a clean manner
+        builder.js 						=> Construct XML cleanly by implementing the builder pattern
 		/style/gphx
 			/bitmap
 				/default
-					loader.gif
 				/high
 				/xhigh
 			/vector

@@ -6,17 +6,20 @@
 
 /* TEXTFIELD: we use a classname to avoid redefine with type=mail, type=number, type=text, etc...; */
 .textfield {
-	font: 1.3rem/4rem System Sans Semibold, Sans-serif, Arial;
+	font: 1.3rem/4rem System Sans Semibold, Sans-serif;
 	border-radius: 0.3rem;
 	border: solid 1px #c8c8c8;
+	width: 100%;
 	height: 4rem;
 	padding: 0 1rem;
+	-moz-box-sizing: border-box;
 }
 .textfield:focus { border-color: #7a7a7a; }
+textarea.textfield { line-height: 1.3em; padding-top: 0.8rem; height: 12rem; overflow: auto; }
 
 
 /* SETBOX: used for grouping inputs with data asociations; */
-.setbox { border: solid 1px #c8c8c8; border-radius: 0.3rem; overflow: hidden; }
+.setbox { background: #fff; border: solid 1px #c8c8c8; border-radius: 0.3rem; overflow: hidden; }
 	.sbox-title {
 		float: left;
 		display: inline;

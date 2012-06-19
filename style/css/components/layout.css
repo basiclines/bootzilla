@@ -21,7 +21,7 @@
 
 
  /* STACK: inline block list items; */
-.stack { letter-spacing: -0.4rem; }
+.stack { letter-spacing: -0.4rem; text-align: center; }
 	 .stack > li {
 	 	display: inline-block; 
 	 	vertical-align: middle;
@@ -45,9 +45,10 @@
 -moz-box-align: center;
 -webkit-box-align: center;
  }
- .grd-vertical { -moz-box-orient: vertical; -webkit-box-orient: vertical; }
-  	.grd-vertical > * { height: 0; }
-  .grid > * { -moz-box-flex: 1; -webkit-box-flex: 1; width: 0; height: 100%; text-align: center; }
+ .grd-vertical { -moz-box-orient: vertical; -webkit-box-orient: vertical; height: 100%; }
+	.grid > * { -moz-box-flex: 1; -webkit-box-flex: 1; width: 0; height: 100%; text-align: center; }
+  	.grd-vertical > * { height: 0; width: auto; }
+
 
 
 
