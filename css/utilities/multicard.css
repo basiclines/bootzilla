@@ -1,0 +1,31 @@
+section.multiCard > section {
+  top: 0;
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  overflow: hidden;
+}
+
+section[data-position] {
+  -moz-transition: -moz-transform .2s ease-in;
+}
+
+section[data-position = 'top'] {
+  -moz-transform: translate(0, -100%);
+}
+
+section[data-position = 'down'] {
+  -moz-transform: translate(0, 100%);
+}
+
+section[data-position = 'right'] {
+  -moz-transform: translate(100%, 0);
+}
+
+section[data-position = 'left'] {
+  -moz-transform: translate(-100%, 0);
+}
+
+section[data-position = 'home'] {
+  -moz-transform: translate(0, 0);
+}
