@@ -8,6 +8,8 @@
 /* Hidden elements */
 .hide { display: none!important }
 .unb-hide { font-size: 0/0 a!important; }
+[data-template] { display: none!important; }
+
 
 
 /* Global */
@@ -83,8 +85,3 @@ article, aside, details, figcaption, figure, footer, header, hgroup,
 menu, nav, section, video, audio, canvas, progress, meter, time 
 	{ display: block; padding: 0; margin: 0; }
 	
-/* TEMPLATING */
-
-*[data-template] {
-    display: none;
-}
