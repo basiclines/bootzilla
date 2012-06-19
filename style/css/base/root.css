@@ -31,8 +31,8 @@ pre, blockquote { padding: 0; margin: 0; }
 em { font-style: italic; }
 address { font-style: normal; display: inline; }
 abbr, acronym { cursor: default; border: none; }
-strong { font-family: System Sans Bold; font-weight: normal }
-b { font-family: System Sans Semibold; font-weight: normal }
+strong { font-family: System Sans Bold, Sans-serif; font-weight: normal }
+b { font-family: System Sans Semi Bold, Sans-serif; font-weight: normal }
 small { font: 1.1rem/1rem System Sans, Sans-serif; color: #999; }
 
 
@@ -68,7 +68,7 @@ input, textarea, select, button { margin: 0; padding: 0; vertical-align: middle;
 input:focus, textarea:focus { outline: none!important; }
 textarea { resize: none; overflow: auto; height: 4.6rem; }
 
-input[type="text"], textarea { font: 1.3rem/4rem System Sans Semibold, Sans-serif; -moz-box-sizing: border-box; width: 100%; }
+input[type="text"], textarea { font: 1.3rem/4rem System Sans Semibold, Sans-serif; }
 input[type="text"]:focus, textarea:focus { border-color: #7a7a7a; }
 [contenteditable] { outline: none; word-wrap: break-word; }
 
