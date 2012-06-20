@@ -4,58 +4,34 @@
  *
  * Z-INDEX:
  * 	5 	= .vw-bdy-inner
- * 	10 	= .vw-header
+ * 	10 	= .vw-inner > header
  * 	10 	= .vw-jumper
  * ------------------------------------------------------*/
 
 
-/* VIEWS TRANSITIONS */
-.vw-right			{ -moz-transform: translateX(100%); }
-.vw-left			{ -moz-transform: translateX(-100%); }
-.vw-top			{ -moz-transform: translateY(-100%); }
-.vw-bottom		{ -moz-transform: translateY(100%); }
-.vw-fade			{ opacity: 0; }
-.vw-scale			{ -moz-transform: scale(0.2); -moz-transform-origin: center center; }
-.vw-flip 			{ -moz-transform: rotateY(180deg); }
-.vw-flip-revert		{ -moz-transform: rotateY(-180deg); }
+/* VIEWS POSITIONS */
+section[data-position = 'home']		{ moz-transform: translate(0, 0); }
 
+.vw-right,
+section[data-position = 'right']		{ -moz-transform: translateX(100%); }
 
-/* MULTICARD LEGACY: is a duplicated functionality must be reviewed; */
-section.multiCard > section {
-  top: 0;
-  height: 100%;
-  width: 100%;
-  position: fixed;
-  overflow: hidden;
-}
+.vw-left,
+section[data-position = 'left']			{ -moz-transform: translateX(-100%); }
 
-section[data-position] {
-  -moz-transition: -moz-transform .2s ease-in;
-}
+.vw-top,
+section[data-position = 'top']			{ -moz-transform: translateY(-100%); }
 
-section[data-position = 'top'] {
-  -moz-transform: translate(0, -100%);
-}
+.vw-bottom,
+section[data-position = 'down']		{ -moz-transform: translateY(100%); }
 
-section[data-position = 'down'] {
-  -moz-transform: translate(0, 100%);
-}
-
-section[data-position = 'right'] {
-  -moz-transform: translate(100%, 0);
-}
-
-section[data-position = 'left'] {
-  -moz-transform: translate(-100%, 0);
-}
-
-section[data-position = 'home'] {
-  -moz-transform: translate(0, 0);
-}
+.vw-fade								{ opacity: 0; }
+.vw-scale								{ -moz-transform: scale(0.2); -moz-transform-origin: center center; }
+.vw-flip 								{ -moz-transform: rotateY(180deg); }
+.vw-flip-revert							{ -moz-transform: rotateY(-180deg); }
 
 
 /* VIEW */
-.view {
+.view, section[data-position] {
 	position: fixed;
 	left: 0;
 	top: 0;
@@ -75,8 +51,8 @@ section[data-position = 'home'] {
 	}
 
 		/* COMMON SET-UP */
-		.vw-header, .vw-nav a { height: 4.8rem; }
-		.vw-header, .vw-nav {
+		.vw-inner > header, .vw-inner > nav a { height: 4.8rem; }
+		.vw-inner > header, .vw-inner > nav {
 			overflow: hidden;
 			position: relative;
 			color: #fff;
@@ -85,14 +61,14 @@ section[data-position = 'home'] {
 
 
 		/* HEADER */
-		.vw-header {
+		.vw-inner > header {
 			background-color: #ff6400;
 			box-shadow: inset 0 -1px 0 0 rgba(0, 0, 0, 0.25), 0 2px 4px -4px rgba(0, 0, 0, 0.99);
 			position: relative;
 			z-index: 10;
 		}
-			.vw-header a { display: block; padding: 1rem;  }
-			.vw-header h1 {
+			.vw-inner > header a { display: block; padding: 1rem;  }
+			.vw-inner > header h1 {
 				font: 2.1rem/4.8rem System Sans Light, Sans-serif;
 				text-align: left;
 				text-overflow: ellipsis;
@@ -103,16 +79,17 @@ section[data-position = 'home'] {
 			}
 
 			/* Back button */
-			.vw-back a {
-				padding: 1.1rem 0.7rem 1rem 1px;
-				background: rgba(0, 0, 0, 0.1);
-				border-right: solid 1px rgba(0, 0, 0, 0.2);
-				box-shadow: 0 1px 0 1px rgba(255, 255, 255, 0.3);
-			}
+			.vw-inner > header p { float: left; }
+				.vw-inner > header p a {
+					padding: 1.1rem 0.7rem 1rem 1px;
+					background: rgba(0, 0, 0, 0.1);
+					border-right: solid 1px rgba(0, 0, 0, 0.2);
+					box-shadow: 0 1px 0 1px rgba(255, 255, 255, 0.3);
+				}
 
 			/* Generic actions in header */
-			.vw-actions { height: 100%; float: right; letter-spacing: -0.4rem;  }
-				.vw-actions li {
+			.vw-inner > header ul { height: 100%; float: right; letter-spacing: -0.4rem;  }
+				.vw-inner > header li {
 					height: 50%;
 					border-left: solid 1px rgba(255, 255, 255, 0.3);
 					border-right: solid 1px rgba(0, 0, 0, 0.2);
@@ -120,11 +97,11 @@ section[data-position = 'home'] {
 					vertical-align: middle;
 					letter-spacing: 0;
 				}
-				.vw-actions li:first-child { border-left: none; }
-				.vw-actions li:last-child { border-right: none; }
+				.vw-inner > header li:first-child { border-left: none; }
+				.vw-inner > header li:last-child { border-right: none; }
 
-					.vw-actions a { margin-top: -25%; }
-					.vw-actions:before {
+					.vw-inner > header ul a { margin-top: -25%; }
+					.vw-inner > header ul:before {
 						content: "";
 						display: inline-block;
 						vertical-align: middle;
@@ -135,7 +112,7 @@ section[data-position = 'home'] {
 
 
 		/* BODY */
-		.vw-body { position: relative; -moz-box-flex: 1; height: 0; }
+		.vw-inner > article { position: relative; -moz-box-flex: 1; height: 0; }
 			.vw-bdy-inner {
 				overflow: auto;
 				position: absolute;
@@ -156,31 +133,45 @@ section[data-position = 'home'] {
 
 
 		/* NAV */
-		.vw-nav { background: #000; }
-			.vw-nav li { border-right: solid 1px rgba(255, 255, 255, 0.1); }
-			.vw-nav li:last-child { border: none; }
-				.vw-nav a { display: block; color: #fff; }
-					.vw-nav a:before {
-						content: "";
-						display: inline-block;
-						vertical-align: middle;
-						width: 1px;
-						height: 100%;
-						margin-left: -1px;
-					}
+		.vw-inner > nav { background: #000; }
+			.vw-inner > nav ul {
+				width: 100%; 
+				display: -moz-box;
+				-moz-box-orient: horizontal;
+				-moz-box-pack: center;
+				-moz-box-align: center;
+				-moz-box-sizing: border-box;
+			}
+				.vw-inner > nav li {
+					-moz-box-flex: 1;
+					width: 0;
+					height: 100%;
+					text-align: center;
+					border-right: solid 1px rgba(255, 255, 255, 0.1);
+				}
+				.vw-inner > nav li:last-child { border: none; }
+					.vw-inner > nav a { display: block; color: #fff; }
+						.vw-inner > nav a:before {
+							content: "";
+							display: inline-block;
+							vertical-align: middle;
+							width: 1px;
+							height: 100%;
+							margin-left: -1px;
+						}
 
-				.vw-nav-labeled a { position: relative; }
-					.vw-nav-labeled i { margin-top: -2rem; }
-					.vw-nav-labeled a:after {
-						content: attr(title);
-						font: 1.2rem/2rem System Sans Semibold, Sans-serif;
-						text-align: center;
-						position: absolute;
-						bottom: 0;
-						left: 0;
-						right: 0;
-						white-space: nowrap;
-					} 
+					.vw-inner > nav[data-labels="true"] a { position: relative; }
+						.vw-inner > nav[data-labels="true"] i { margin-top: -2rem; }
+						.vw-inner > nav[data-labels="true"] a:after {
+							content: attr(title);
+							font: 1.2rem/2rem System Sans Semibold, Sans-serif;
+							text-align: center;
+							position: absolute;
+							bottom: 0;
+							left: 0;
+							right: 0;
+							white-space: nowrap;
+						} 
 
 
 		/* JUMPER: Goes directly to some point in the scroll; */
