@@ -53,9 +53,10 @@ if(typeof window.responsive === 'undefined') {
   //Scale function
   function scale(e) {
     //Ratio calculation
-    var scale_ratio = this.device.width() / this.base.width;
     var deviceWidth = this.device.width();
     var deviceHeight = this.device.height();
+
+    var scale_ratio =  deviceWidth / this.base.width;
 
     scale_ratio = scale_ratio.toFixed(2);
 
@@ -64,17 +65,17 @@ if(typeof window.responsive === 'undefined') {
 
     //Check for non base width devices
     if (  this.base.width != deviceWidth) {
-      var font_size = scale_ratio * this.base.font;
+      font_size = scale_ratio * this.base.font;
     }
 
     //Check for portrait devices
     if ( deviceWidth === deviceHeight || deviceWidth > deviceHeight ) {
-      var font_size = deviceWidth / 1000 * this.base.font;
+      font_size = deviceWidth / 1000 * this.base.font;
     }
 
     //Apply final font-size
-    var font_size = font_size.toFixed(2);
-    root.style.fontSize = font_size+"%";
+    font_size = font_size.toFixed(2);
+    root.style.fontSize = font_size + "%";
 
     window.console.log('Responsive has been executed!');
   };
