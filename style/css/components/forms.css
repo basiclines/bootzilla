@@ -64,7 +64,7 @@ textarea.textfield { line-height: 1.3em; padding-top: 0.8rem; height: 12rem; ove
 	.fill-flow > * { margin-bottom: 0.5rem; position: relative; }
 	
 		/* ROW ACTION */
-		.ff-row-action { position: absolute; left: 100%; top: 50%; margin: -1rem 0 0 0.5rem; }
+		.fill-flow button.unstyled { position: absolute; left: 100%; top: 50%; margin: -1rem 0 0 0.5rem; }
 
 	/* MEDIA: specific ratio used in forms; */
 	.ff-media { border: solid 1px #c8c8c8; margin: 0 0.5rem 0.5rem 0; width: 8.8rem; height: 8.3rem; }

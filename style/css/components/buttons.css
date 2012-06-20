@@ -30,6 +30,18 @@ button {
 
 		button b + em, button i + b { margin-left: 0; }
 
+
+/* No style */
+button.unstyled {
+	background: none;
+	box-shadow: none;
+	border: none;
+	padding: 0;
+	display: inline-block;
+	width: auto;
+	height: auto;
+}
+
 /* Add style */
 button.add {
 	background: -moz-linear-gradient(bottom, #696f77, #7b7e82);
