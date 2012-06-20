@@ -15,17 +15,17 @@
 		</style>
 	</head>
 	<body>
-		<section class="view vw-noscroll">
+		<section class="view" data-scroll="false">
 			<div class="vw-inner">
 				<header>
 					<h1>.vw-jumper</h1>
 				</header>
 				<article>
 					<div class="vw-jumper">
-						<p class="vw-jmp-current hide"><abbr title="Contacts by G">G</abbr></p>
-						<ol class="vw-jmp-inner">
-							<li><a href="#"><i class="i-search"></i></a></li>
-							<li><a href="#"><i class="i-fav-dark"></i></a></li>
+						<p class="hide"><abbr title="Contacts by G">G</abbr></p>
+						<ol>
+							<li><a href="#"><i class="i-search">Search</i></a></li>
+							<li><a href="#"><i class="i-fav-dark">Favourites</i></a></li>
 							<li><a href="#"><abbr title="Jump to A">A</abbr></a></li>
 							<li><a href="#"><abbr title="Jump to B">B</abbr></a></li>
 							<li><a href="#"><abbr title="Jump to C">C</abbr></a></li>
@@ -57,8 +57,7 @@
 					</div>
 					<div class="vw-bdy-inner">
 						<p>This allows to the user to jump directly to some key points in the scroll</p>
-						<p>In this case we should add to the .view the classname <strong>.vw-noscroll</strong>, to avoid having scrollbars but still having scroll behaviour</p>
-
+						<p>In this case we should add to the .view the data attribute <br/> <strong>data-scroll="false"</strong>, to avoid having UI scrollbars but still having scrolling behaviour</p>
 						<ul>
 							<li>dummy text</li>
 							<li>dummy text</li>

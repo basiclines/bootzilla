@@ -128,8 +128,8 @@ section[data-position = 'down']		{ -moz-transform: translateY(100%); }
 				text-align: left;
 			}
 
-			/* Removes scroll from the view body inner */
-			.vw-noscroll .vw-bdy-inner { width: -moz-calc(100% + 0.8rem); }
+			/* Removes visually the scroll from the view-bdy-inner */
+			.view[data-scroll="false"] .vw-bdy-inner { width: -moz-calc(100% + 0.8rem); }
 
 
 		/* NAV */
@@ -182,8 +182,8 @@ section[data-position = 'down']		{ -moz-transform: translateY(100%); }
 			bottom: 1rem;
 			z-index: 10;
 		}
-			.vw-jumper:active .vw-jmp-inner, .vw-jumper.active .vw-jmp-inner  { background: #999; }
-			.vw-jmp-current {
+			.vw-jumper:active ol, .vw-jumper.active ol  { background: #999; }
+			.vw-jumper p {
 				position: absolute;
 				right: 4rem;
 				top: 30%;
@@ -194,7 +194,7 @@ section[data-position = 'down']		{ -moz-transform: translateY(100%); }
 				text-align: center;
 				pointer-events: none;
 			}
-			.vw-jmp-inner {
+			.vw-jumper ol {
 				display: -moz-box;
 				-moz-box-orient: vertical;
 				height: 100%;
@@ -209,9 +209,11 @@ section[data-position = 'down']		{ -moz-transform: translateY(100%); }
 					text-transform: uppercase;
 					-moz-box-flex: 1;
 					width: 2.5rem;
+					height: 0;
 				}
-					.vw-jmp-inner a, .vw-jmp-inner abbr { display: block; color: #333; width: 100%; }
-						.vw-jmp-inner i { width: 1.2rem; height: 1.2rem; }
+					.vw-jumper a, .vw-jumper abbr { display: block; width: 100%; }
+					.vw-jumper a { color: #333; }
+						.vw-jumper ol i { width: 1.2rem; height: 1.2rem; }
 
 
 
