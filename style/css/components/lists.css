@@ -49,7 +49,7 @@
 			padding:  0 0 0 1.8rem;
 		}
 			/* This elements defines if the item is selected or not */
-			.slcl-state { position: absolute; right: 0.5rem; top: 50%; margin-top: -1.5rem; }
+			.selection-list i.selected { position: absolute; right: 0.5rem; top: 50%; margin-top: -1.5rem; }
 
 
 /* INFINITE-SCROLL:  Sets overflows and loding states */
