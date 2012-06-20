@@ -20,7 +20,7 @@ textarea.textfield { line-height: 1.3em; padding-top: 0.8rem; height: 12rem; ove
 
 /* SETBOX: used for grouping inputs with data asociations; */
 .setbox { background: #fff; border: solid 1px #c8c8c8; border-radius: 0.3rem; overflow: hidden; }
-	.sbox-title {
+	.setbox dt {
 		float: left;
 		display: inline;
 		width: 9.3rem;
@@ -33,34 +33,35 @@ textarea.textfield { line-height: 1.3em; padding-top: 0.8rem; height: 12rem; ove
 		line-height: 1.6rem;
 		text-transform: uppercase;
 	}
-		.sbox-title a { color: #333; }
-		.sbox-title a, .sbox-title:before { display: inline-block; vertical-align: middle; }
-		.sbox-title:before {
+		.setbox dt a { color: #333; }
+		.setbox dt a, .setbox dt:before { display: inline-block; vertical-align: middle; }
+		.setbox dt:before {
 			content: "";
 			width: 1px;
 			height: 100%;
 			min-height: 4rem;
 			margin-left: -1px;
 		}
-			.sbox-icon { position: absolute; right: 0.5rem; top: 50%; }
-			.sbox-icon.i-arrow { margin-top: -0.2rem; }
+			.setbox dt i { position: absolute; right: 0.5rem; top: 50%; }
+			.setbox dt i.arrow { margin-top: -0.2rem; }
 
-	.sbox-body {
+	.setbox dd {
 		display: block;
 		overflow: hidden;
 		border-left: solid 1px #ddd;
 		border-radius: 0 0.3rem 0.3rem 0;
 	}
-		.sbox-item { border-bottom: solid 1px #ddd; }
-		.sbox-item:last-child { border-bottom: none; }
-			.sbox-body .textfield { border: none; border-radius: 0; margin-bottom: 0; }
+		.setbox dd p { border-bottom: solid 1px #ddd; }
+		.setbox dd p:last-child { border-bottom: none; }
+			.setbox dd .textfield { border: none; border-radius: 0; margin-bottom: 0; }
 
 
 /* FILL FLOW: general components for helping in defining basic flows in forms; */
 .fill-flow { padding-right: 1rem; }
+	.fill-flow .fill-flow { padding: 0; }
 
 	/* ROW: horizontal separation for elements; */
-	.ff-row { margin-bottom: 0.5rem; position: relative; }
+	.fill-flow > * { margin-bottom: 0.5rem; position: relative; }
 	
 		/* ROW ACTION */
 		.ff-row-action { position: absolute; left: 100%; top: 50%; margin: -1rem 0 0 0.5rem; }
