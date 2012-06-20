@@ -9,69 +9,78 @@
  *
  *  @author Ismael González (igonzaleznicolas@gmail.com)
  *
- *  This files is in charge of calculating the amout of resizing needed for the device
+ *  This files is in charge of calculating the amoutn of resizing needed for the device
  *
 */
 
-//Base config
-base =  {
-	font: 62.5,
-	width: 320,
-	height: 480,
-	pixel: 1,
-	ratio: function () {
-		 return this.height / this.width;
-	}
-};
+if(typeof window.responsive === 'undefined') {
+  (function(document) {
 
-//Get some information of the device
-device =  {
-	width: function () {
-		return window.innerWidth;
-	},
-	height: function () {
-		return window.innerHeight;
-	},
-	pixel: function () {
-		if ( window.devicePixelRatio !== undefined ) {
-			return window.devicePixelRatio;
-		} else {
-			return base.pixel;
-		}
-	},
-	ratio: function () {
-		var raw = this.height() / this.width();
-		decimal_split(raw);
-	}
+  var responsive = window.responsive = {};
+
+  //Base config
+  responsive.base =  {
+    font: 62.5,
+    width: 320,
+    height: 480,
+    pixelRatio: 1,
+    ratio: function () {
+       return this.height / this.width;
+    }
+  };
+
+  //Get some information of the device
+  responsive.device =  {
+    width: function () {
+      return window.innerWidth;
+    },
+    height: function () {
+      return window.innerHeight;
+    },
+    pixelRatio: function () {
+      if ( window.devicePixelRatio  ) {
+        return window.devicePixelRatio;
+      } else {
+        return base.pixelRatio;
+      }
+    },
+    ratio: function () {
+      var raw = this.height() / this.width();
+      decimal_split(raw);
+    }
+  };
+
+  //Scale function
+  function scale(e) {
+    //Ratio calculation
+    var scale_ratio = this.device.width() / this.base.width;
+    var deviceWidth = this.device.width();
+    var deviceHeight = this.device.height();
+
+    scale_ratio = scale_ratio.toFixed(2);
+
+    var root = document.documentElement;
+    var font_size = this.base.font;
+
+    //Check for non base width devices
+    if (  this.base.width != deviceWidth) {
+      var font_size = scale_ratio * this.base.font;
+    }
+
+    //Check for portrait devices
+    if ( deviceWidth === deviceHeight || deviceWidth > deviceHeight ) {
+      var font_size = deviceWidth / 1000 * this.base.font;
+    }
+
+    //Apply final font-size
+    var font_size = font_size.toFixed(2);
+    root.style.fontSize = font_size+"%";
+
+    window.console.log('Responsive has been executed!');
+  };
+
+  //Add scale to listeners
+  window.addEventListener("load", scale.bind(responsive));
+
+  })(document);
 }
-
-//Scale function
-scale =  (function (){
-	
-	//Ratio calculation
-	var scale_ratio = device.width() / base.width;
-	scale_ratio = scale_ratio.toFixed(2);
-
-	var root = document.getElementsByTagName("html")[0];
-	var font_size = base.font;
-
-	//Check for non base width devices
-	if (  base.width != device.width() ) {
-		var font_size = scale_ratio * base.font; 
-	}
-
-	//Check for portrait devices
-	if ( device.width() == device.height() || device.width() > device.height() ) {
-		var font_size = device.width() / 1000 * base.font;
-	}
-
-	//Apply final font-size
-	var font_size = font_size.toFixed(2);
-	root.style.fontSize = font_size+"%";
-
-});
-
-//Add scale to listeners
-window.addEventListener("load", function (e) {
-	scale();
-});
