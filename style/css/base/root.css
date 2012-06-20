@@ -34,7 +34,7 @@ em { font-style: italic; }
 address { font-style: normal; display: inline; }
 abbr, acronym { cursor: default; border: none; }
 strong { font-family: System Sans Bold, Sans-serif; font-weight: normal }
-b { font-family: System Sans Semi Bold, Sans-serif; font-weight: normal }
+b { font-family: System Sans Semibold, Sans-serif; font-weight: normal }
 small { font: 1.1rem/1rem System Sans, Sans-serif; color: #999; }
 
 
