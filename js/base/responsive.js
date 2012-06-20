@@ -80,8 +80,7 @@ if(typeof window.responsive === 'undefined') {
     window.console.log('Responsive has been executed!');
   };
 
-  //Add scale to listeners
-  window.addEventListener("load", scale.bind(responsive));
+  scale.bind(responsive)();
 
   })(document);
 }
