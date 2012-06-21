@@ -5,7 +5,7 @@
  * Z-INDEX:
  * 	5 	= .vw-bdy-inner
  * 	10 	= header[role=toolbar]
- * 	10 	= .vw-jumper
+ * 	10 	= [role="scrollbar"]
  * ------------------------------------------------------*/
 
 
@@ -125,7 +125,7 @@
 	}
 
 		/* Removes the scroll UI */
-		[data-scroll="false"] { /* width: -moz-calc(100% + 0.8rem); */ margin-right: -0.8rem; }
+		[data-uiscroll="false"] { /* width: -moz-calc(100% + 0.8rem); */ margin-right: -0.8rem; }
 
 
 	/* NAVIGATION */
@@ -171,15 +171,15 @@
 
 
 	/* JUMPER: Goes directly to some point in the scroll; */
-	.vw-jumper {
+	[role="scrollbar"] {
 		position: absolute;
 		right: 0;
 		top: 0;
 		bottom: 1rem;
 		z-index: 10;
 	}
-		.vw-jumper:active ol, .vw-jumper.active ol  { background: #999; }
-		.vw-jumper p {
+		[role="scrollbar"]:active ol, [role="scrollbar"].active ol  { background: #999; }
+		[role="scrollbar"] p {
 			position: absolute;
 			right: 4rem;
 			top: 30%;
@@ -190,7 +190,7 @@
 			text-align: center;
 			pointer-events: none;
 		}
-		.vw-jumper ol {
+		[role="scrollbar"] ol {
 			display: -moz-box;
 			-moz-box-orient: vertical;
 			height: 100%;
@@ -198,7 +198,7 @@
 			border-radius: 4rem;
 			opacity: 0.6;
 		}
-			.vw-jumper li {
+			[role="scrollbar"] li {
 				font-size: 1.1rem;
 				line-height: 1em;
 				text-align: center;
@@ -207,16 +207,6 @@
 				width: 2.5rem;
 				height: 0;
 			}
-				.vw-jumper a, .vw-jumper abbr { display: block; width: 100%; }
-				.vw-jumper a { color: #333; }
-					.vw-jumper ol i { width: 1.2rem; height: 1.2rem; }
-
-
-
-
-
-
-
-
-
-
+				[role="scrollbar"] a, [role="scrollbar"] abbr { display: block; width: 100%; }
+				[role="scrollbar"] a { color: #333; }
+					[role="scrollbar"] ol i { width: 1.2rem; height: 1.2rem; }
