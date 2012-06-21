@@ -13,9 +13,9 @@
 
 
 /* Global */
-html, body { height: 100%; }
+html, [role="application"] { height: 100%; }
 html { font-size: 62.5%;   }
-body { margin: 0; padding: 0; overflow: hidden; background: #000; color: #fff; font: 1.6rem/2.2rem System Sans, Sans-serif; text-align: center; vertical-align: middle;  }
+[role="application"] { margin: 0; padding: 0; overflow: hidden; background: #000; color: #fff; font: 1.6rem/2.2rem System Sans, Sans-serif; text-align: center; vertical-align: middle;  }
 .enable-3d { -moz-perspective: 500px; }
 
 
