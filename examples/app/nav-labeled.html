@@ -10,34 +10,31 @@
 		<script type="text/javascript" src="../../js/base/responsive.js"></script>
 
 	</head>
-	<body>
-		<section class="view">
-			<div class="vw-inner">
-				<header>
-					<h1>App title</h1>
-				</header>
-				<article>
-					<div class="vw-bdy-inner">
-						<p>The navigation could have labels and icons</p>
-					</div>
-				</article>
-				<nav data-labels="true">
-					<ul>
-						<li>
-							<a href="#" title="Add"><i class="add">Add</i></a>
-						</li>
-						<li>
-							<a href="#" title="Edit"><i class="edit">Edit</i></a>
-						</li>
-						<li>
-							<a href="#" title="Add"><i class="add">Add</i></a>
-						</li>
-						<li>
-							<a href="#" title="Edit"><i class="edit">Edit</i></a>
-						</li>
-					</ul>
-				</nav>
-			</div>
+	<body role="application">
+		<section role="window">
+			<header role="toolbar">
+				<h1>App title</h1>
+			</header>
+			<section role="region">
+					<p>The navigation could have labels and icons</p>
+				</div>
+			</section>
+			<nav role="menubar" data-labels="true">
+				<ul>
+					<li>
+						<a href="#" title="Add"><i class="add">Add</i></a>
+					</li>
+					<li>
+						<a href="#" title="Edit"><i class="edit">Edit</i></a>
+					</li>
+					<li>
+						<a href="#" title="Add"><i class="add">Add</i></a>
+					</li>
+					<li>
+						<a href="#" title="Edit"><i class="edit">Edit</i></a>
+					</li>
+				</ul>
+			</nav>
 		</section>
 	</body>
 </html>

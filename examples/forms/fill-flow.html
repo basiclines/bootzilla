@@ -14,121 +14,115 @@
 		.docs { margin-bottom: 1rem; }
 		</style>
 	</head>
-	<body>
-		<section class="view">
-			<div class="vw-inner">
-				<header>
-					<h1>.fill-flow</h1>
-				</header>
-				<article>
-					<div class="vw-bdy-inner">
-						<p class="docs">As we have seen, we could have small components for forms, but also we can create layout flows with them.</p>
+	<body role="application">
+		<section role="window">
+			<header role="toolbar">
+				<h1>.fill-flow</h1>
+			</header>
+			<section role="region">
+				<p class="docs">As we have seen, we could have small components for forms, but also we can create layout flows with them.</p>
+				<form class="fill-flow" action="#">
+					<fieldset class="item">
+						<legend class="hide">Main information</legend>
+						<a class="itm-media ff-media" href="#">
+							<img alt="Mark Afeinto" src="../dummy/88x83.jpg">
+						</a>
+						<div class="itm-body-exp fill-flow">
+							<p>
+								<label for="user_name" class="hide">Name:</label>
+								<input type="text" id="user_name" value="Mark" class="textfield">
+							</p>
+							<p>
+								<label for="user_lastname" class="hide">Last name:</label>
+								<input type="text" id="user_lastname" value="Afeinto" class="textfield">
+							</p>
+						</div>
+					</fieldset>
 
-						<form class="fill-flow" action="#">
-							<fieldset class="item">
-								<legend class="hide">Main information</legend>
-								<a class="itm-media ff-media" href="#">
-									<img alt="Mark Afeinto" src="../dummy/88x83.jpg">
-								</a>
-								<div class="itm-body-exp fill-flow">
-									<p>
-										<label for="user_name" class="hide">Name:</label>
-										<input type="text" id="user_name" value="Mark" class="textfield">
-									</p>
-									<p>
-										<label for="user_lastname" class="hide">Last name:</label>
-										<input type="text" id="user_lastname" value="Afeinto" class="textfield">
-									</p>
-								</div>
-							</fieldset>
+					<fieldset>
+						<legend>Work information</legend>
+						<dl class="setbox">
+							<dt><a href="#">Company <i class="arrow arw-bottom">Select a type</i></a></dt>
+							<dd>
+								<p>
+									<label for="user_company" class="hide">Company name:</label>
+									<input type="text" id="user_company" value="Telefónica Digital" class="textfield">
+								</p>
+							</dd>
+						</dl>
+					<!-- 
+						The perfect approach to this component is to use the fieldset as setbox container
+						and the sbox-title using a legend, but this bug prevent us to use in that way
+						https://bugzilla.mozilla.org/show_bug.cgi?id=261037 
+					-->
+						<button class="unstyled">
+							<i class="delete">Delete this field</i>
+						</button>
+					</fieldset>
 
-							<fieldset>
-								<legend>Work information</legend>
-								<dl class="setbox">
-									<dt><a href="#">Company <i class="arrow arw-bottom">Select a type</i></a></dt>
-									<dd>
-										<p>
-											<label for="user_company" class="hide">Company name:</label>
-											<input type="text" id="user_company" value="Telefónica Digital" class="textfield">
-										</p>
-									</dd>
-								</dl>
-							<!-- 
-								The perfect approach to this component is to use the fieldset as setbox container
-								and the sbox-title using a legend, but this bug prevent us to use in that way
-								https://bugzilla.mozilla.org/show_bug.cgi?id=261037 
-							-->
-								<button class="unstyled">
-									<i class="delete">Delete this field</i>
-								</button>
-							</fieldset>
+					<fieldset>
+						<legend>Phone numbers</legend>
+						<dl class="setbox">
+							<dt><a href="#">Home (Default) <i class="arrow arw-bottom">Select a type</i></a></dt>
+							<dd>
+								<p>
+									<label for="phone_home_number" class="hide">Phone number:</label>
+									<input type="number" id="phone_home_number" value="34 607 477 497" class="textfield">
+								</p>
+								<p>
+									<label for="phone_home_name" class="hide">Name:</label>
+									<input type="text" id="phone_home_name" value="Telefónica" class="textfield">
+								</p>
+							</dd>
+						</dl>
+						<button class="unstyled">
+							<i class="delete">Delete this field</i>
+						</button>
+					</fieldset>
 
-							<fieldset>
-								<legend>Phone numbers</legend>
-								<dl class="setbox">
-									<dt><a href="#">Home (Default) <i class="arrow arw-bottom">Select a type</i></a></dt>
-									<dd>
-										<p>
-											<label for="phone_home_number" class="hide">Phone number:</label>
-											<input type="number" id="phone_home_number" value="34 607 477 497" class="textfield">
-										</p>
-										<p>
-											<label for="phone_home_name" class="hide">Name:</label>
-											<input type="text" id="phone_home_name" value="Telefónica" class="textfield">
-										</p>
-									</dd>
-								</dl>
-								<button class="unstyled">
-									<i class="delete">Delete this field</i>
-								</button>
-							</fieldset>
+					<button class="add">
+						<i class="add"></i>
+						<b>Add phone number</b>
+					</button>
 
-							<button class="add">
-								<i class="add"></i>
-								<b>Add phone number</b>
-							</button>
+					<fieldset>
+						<legend>E-mail address</legend>
+						<dl class="setbox">
+							<dt><a href="#">Work <i class="arrow arw-bottom">Select a type</i></a></dt>
+							<dd>
+								<p>
+									<label for="user_email" class="hide">e-mail:</label>
+									<input type="mail" id="user_email" value="alonso@gmail.com" class="textfield">
+								</p>
+							</dd>
+						</dl>
+						<button class="unstyled">
+							<i class="delete">Delete this field</i>
+						</button>
+					</fieldset>
 
-							<fieldset>
-								<legend>E-mail address</legend>
-								<dl class="setbox">
-									<dt><a href="#">Work <i class="arrow arw-bottom">Select a type</i></a></dt>
-									<dd>
-										<p>
-											<label for="user_email" class="hide">e-mail:</label>
-											<input type="mail" id="user_email" value="alonso@gmail.com" class="textfield">
-										</p>
-									</dd>
-								</dl>
-								<button class="unstyled">
-									<i class="delete">Delete this field</i>
-								</button>
-							</fieldset>
+					<button class="add">
+						<i class="add"></i>
+						<b>Add email address</b>
+					</button>
 
-							<button class="add">
-								<i class="add"></i>
-								<b>Add email address</b>
-							</button>
-
-							<fieldset>
-								<legend>Address</legend>
-								<dl class="setbox">
-									<dt><a href="#">Work <i class="arrow arw-bottom">Select a type</i></a></dt>
-									<dd>
-										<p>
-											<label for="user_email" class="hide">Street:</label>
-											<input type="text" id="user_email" value="Ronda de la comunicación" class="textfield">
-										</p>
-									</dd>
-								</dl>
-								<button class="unstyled">
-									<i class="delete">Delete this field</i>
-								</button>
-							</fieldset>
-						</form>
-						
-					</div>
-				</article>
-			</div>
+					<fieldset>
+						<legend>Address</legend>
+						<dl class="setbox">
+							<dt><a href="#">Work <i class="arrow arw-bottom">Select a type</i></a></dt>
+							<dd>
+								<p>
+									<label for="user_email" class="hide">Street:</label>
+									<input type="text" id="user_email" value="Ronda de la comunicación" class="textfield">
+								</p>
+							</dd>
+						</dl>
+						<button class="unstyled">
+							<i class="delete">Delete this field</i>
+						</button>
+					</fieldset>
+				</form>
+			</section>
 		</section>
 	</body>
 </html>

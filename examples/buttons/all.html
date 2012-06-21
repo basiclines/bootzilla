@@ -14,60 +14,56 @@
 			button { margin-bottom: 1rem; }
 		</style>
 	</head>
-	<body>
-		<section class="view">
-			<div class="vw-inner">
-				<header>
-					<h1>button</h1>
-				</header>
-				<article>
-					<div class="vw-bdy-inner">
-						<button>
-							<b>I'm a default button</b>
-						</button>
+	<body role="application">
+		<section role="window">
+			<header role="toolbar">
+				<h1>button</h1>
+			</header>
+			<section role="region">
+				<button>
+					<b>I'm a default button</b>
+				</button>
 
-						<ul class="stack">
-							<li>
-								<button>
-									<i class="call">Call</i>
-								</button>
-							</li>
-
-							<li>
-								<button>
-									<i class="call">Call</i>
-								</button>
-							</li>
-
-							<li>
-								<button>
-									<i class="call">Call</i>
-								</button>
-							</li>
-
-							<li>
-								<button>
-									<i class="call">Call</i>
-								</button>
-							</li>
-						</ul>
-
+				<ul class="stack">
+					<li>
 						<button>
 							<i class="call">Call</i>
-							<b>I'm a labeled default button with icon</b>
 						</button>
+					</li>
 
-						<button class="add">
-							<b>I'm an "addition" button</b>
+					<li>
+						<button>
+							<i class="call">Call</i>
 						</button>
+					</li>
 
-						<button class="add">
-							<i class="add">Add</i>
-							<b>With an icon</b>
+					<li>
+						<button>
+							<i class="call">Call</i>
 						</button>
-					</div>
-				</article>
-			</div>
+					</li>
+
+					<li>
+						<button>
+							<i class="call">Call</i>
+						</button>
+					</li>
+				</ul>
+
+				<button>
+					<i class="call">Call</i>
+					<b>I'm a labeled default button with icon</b>
+				</button>
+
+				<button class="add">
+					<b>I'm an "addition" button</b>
+				</button>
+
+				<button class="add">
+					<i class="add">Add</i>
+					<b>With an icon</b>
+				</button>
+			</section>
 		</section>
 	</body>
 </html>

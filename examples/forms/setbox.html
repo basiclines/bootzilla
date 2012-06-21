@@ -14,51 +14,45 @@
 		.docs { margin-bottom: 1rem; }
 		</style>
 	</head>
-	<body>
-		<section class="view">
-			<div class="vw-inner">
-				<header>
-					<h1>.setbox</h1>
-				</header>
-				<article>
-					<div class="vw-bdy-inner">
-						<p class="docs">This a relationship inputs container</p>
+	<body role="application">
+		<section role="window">
+			<header role="toolbar">
+				<h1>.setbox</h1>
+			</header>
+			<section role="region">
+				<p class="docs">This a relationship inputs container</p>
+				<form action="#" class="fill-flow">
+					<fieldset>
+						<legend>Setbox</legend>
+						<dl class="ff-row setbox">
+							<dt>
+								<a href="#">Home <i class="arrow arw-bottom"></i></a>
+							</dt>
+							<dd>
+								<p>
+									<input class="textfield" type="number" value="600 384 290">
+								</p>
 
-						<form action="#" class="fill-flow">
-							<fieldset>
-								<legend>Setbox</legend>
-								<dl class="ff-row setbox">
-									<dt>
-										<a href="#">Home <i class="arrow arw-bottom"></i></a>
-									</dt>
-									<dd>
-										<p>
-											<input class="textfield" type="number" value="600 384 290">
-										</p>
-
-										<p>
-											<input class="textfield" type="text" value="Telefónica">
-										</p>
-									</dd>
-								</dl>
-							</fieldset>
-							<fieldset>
-								<dl class="ff-row setbox">
-									<dt>
-										<a href="#">Work <i class="arrow arw-bottom"></i></a>
-									</dt>
-									<dd>
-										<p>
-											<input class="textfield" type="email" value="foo@mail.com"></input>
-										</p>
-									</dd>
-								</dl>
-							</fieldset>
-						</form>
-						
-					</div>
-				</article>
-			</div>
+								<p>
+									<input class="textfield" type="text" value="Telefónica">
+								</p>
+							</dd>
+						</dl>
+					</fieldset>
+					<fieldset>
+						<dl class="ff-row setbox">
+							<dt>
+								<a href="#">Work <i class="arrow arw-bottom"></i></a>
+							</dt>
+							<dd>
+								<p>
+									<input class="textfield" type="email" value="foo@mail.com"></input>
+								</p>
+							</dd>
+						</dl>
+					</fieldset>
+				</form>
+			</section>
 		</section>
 	</body>
 </html>
