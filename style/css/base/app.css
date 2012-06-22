@@ -3,8 +3,7 @@
  * Layout set-up for creating common app layouts
  *
  * Z-INDEX:
- * 	5 	= .vw-bdy-inner
- * 	10 	= header[role=toolbar]
+ * 	10 	= [role=toolbar]
  * 	10 	= [role="scrollbar"]
  * ------------------------------------------------------*/
 
@@ -78,8 +77,8 @@
 		}
 
 		/* Back button */
-		[role="toolbar"] p { float: left; }
-			[role="toolbar"] p a {
+		[role="toolbar"] > p { float: left; }
+			[role="toolbar"] > p a {
 				padding: 1.1rem 0.7rem 1rem 1px;
 				background: rgba(0, 0, 0, 0.1);
 				border-right: solid 1px rgba(0, 0, 0, 0.2);
@@ -87,8 +86,8 @@
 			}
 
 		/* Generic set of actions in toolbar */
-		[role="toolbar"] ul { height: 100%; float: right; letter-spacing: -0.4rem;  }
-			[role="toolbar"] li {
+		[role="toolbar"] [role="menu"] { height: 100%; float: right; letter-spacing: -0.4rem;  }
+			[role="toolbar"] [role="menuitem"] {
 				height: 50%;
 				border-left: solid 1px rgba(255, 255, 255, 0.3);
 				border-right: solid 1px rgba(0, 0, 0, 0.2);
@@ -96,11 +95,11 @@
 				vertical-align: middle;
 				letter-spacing: 0;
 			}
-			[role="toolbar"] li:first-child { border-left: none; }
-			[role="toolbar"] li:last-child { border-right: none; }
+			[role="toolbar"] [role="menuitem"]:first-child { border-left: none; }
+			[role="toolbar"] [role="menuitem"]:last-child { border-right: none; }
 
-				[role="toolbar"] ul a { margin-top: -25%; }
-				[role="toolbar"] ul:before {
+				[role="toolbar"] [role="menu"] a { margin-top: -25%; }
+				[role="toolbar"] [role="menu"]:before {
 					content: "";
 					display: inline-block;
 					vertical-align: middle;
